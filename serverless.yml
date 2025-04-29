@@ -12,5 +12,6 @@ provider:
 functions:
   api:
     handler: handler.handler
+    test: handler.test
     events:
       - httpApi: "*"

@@ -2,21 +2,9 @@ const serverless = require("serverless-http");
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res, next) => {
+app.get("/test", (req, res, next) => {
   return res.status(200).json({
-    message: "Hello from root!",
-  });
-});
-
-app.get("/hello", (req, res, next) => {
-  return res.status(200).json({
-    message: "Probando el deploy, quiero saber si funciona bien el framwork",
-  });
-});
-
-app.use((req, res, next) => {
-  return res.status(404).json({
-    error: "Not Found",
+    message: "Pertenezco a los tests!",
   });
 });
 
