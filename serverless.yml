@@ -9,9 +9,11 @@ provider:
   name: aws
   runtime: nodejs20.x
 
+plugins:
+  - serverless-offline
+
 functions:
   api:
     handler: handler.handler
-    test: handler.test
     events:
       - httpApi: "*"
